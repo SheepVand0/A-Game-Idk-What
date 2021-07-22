@@ -46,6 +46,10 @@ void ACPP_Player::calculLifeShield(float life, float shield, float value, float 
 		ret_life = life;
 	}
 
+	if (life < 0) {
+		ret_life = 0;
+	}
+
 }
 
 void ACPP_Player::notreplic_fire(USceneComponent* camera, float distance, struct FHitResult& OutHit) {
